@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Livrăm acasă- mâncare turcească</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
+    <link rel="icon" type="image/png" sizes="16x16" href="styles/favicon-16x16.png">
+</head>
+<body>
+
+ <!-- Top nav bar --> 
+    <header>
+        <nav>
+            <a href='index.html'><img src="images/logo1.png" alt="Logo"></a>
+            <div class="nav-btns show-btns">
+                <a href="#menu-title" class="menu">Meniu</a>
+                <a href="#" class="login" id="login">Login</a>
+                <a href="#" id='userId' >UserName</a>
+                <a  class="cos" id='cos' >Cos<span id='small-quantity'>1</span></a>  
+                <!-- Cart box -->
+                <div class="cart-box">
+                    <div class="cart-box-container">
+                    <!--<div class="each-item-cart"> 
+                            <div class="title-item-cart">Hummus</div>
+                            <div class="quantity-item-cart">1</div>
+                            <div class="price-item-cart">15 lei</div>
+                            <ion-icon name="close-circle-outline" class='cart-box-delete-itm'></ion-icon>
+                        </div>
+                    -->
+                    </div>
+                    
+                    <div class="total-price-cart">Total: 15 lei</div>
+                    <div class="box">
+                        <button type='button' class='add-btn cart-btn'>Vezi coșul</button>
+                    </div>
+                    
+                </div>
+                <!-- Login box -->
+                    <form class="form login_box hideElement" id='login_box'>
+                        <input type="text" placeholder="Nume utilizator" class='hover-over-input'>
+                        <input type="password" placeholder="Parolă" class='hover-over-input'>
+                        <button id="login-form">Login</button>
+                    </form>
+            </div>
+        </nav>
+        <div class="titles">
+            <h1 class='title-style'>Savurează arome orientale cu ingrediente locale</h1>
+            <h2 class='title-style'>Livrăm gratuit* acasă sau la birou oriunde în Cluj-Napoca</h2>
+        </div>
+        <div class="menu-cont">
+            <a href="index.html#menu-title" class="menu-btn">Meniu</a>
+        </div>
+        <div class="bottom-text font-text">
+            <p>Orar zilnic: 9-21</p>
+            <p>*Livrare gratuită la comenzi de minim 30 lei</p>
+        </div>
+    </header>
+
+    <!-- About section -->
+    <section class='about' id='about'>
+        <h3 class='font-title'>Despre noi</h3>
+        <p class='font-text'>Suntem un grup de prieteni pasionați de călătorii și bucătărie stabiliți în Cluj-Napoca de 5 ani.</p>
+        <p class='font-text'> După mai multe călătorii culinare în țările arabe, ne-am îndrăgostit de mâncarea turcească.</p>
+        <p class='font-text'>Am ales cele mai bune rețete de acolo, iar cu ele, sperăm să vă oferim o experiență culinară cât mai aproape de ceea ce noi am trăit în Turcia.</p>
+    </section>
+
+    <!-- Menus section -->
+    <section class='menu-section' id='menu-section'>
+        <div class="nav-menu">
+            <h3 class='font-title' id='menu-title'>Meniu</h3>
+            <div class="menu-btns-filter">
+                <div class="col1-filter col-filter">
+                    <button type='button' class='btns-filter' id='aperitive-box'>Aperitive</button>
+                    <button type='button' class='btns-filter' id ='garnituri-box'>Garnituri</button>
+                </div>
+                <div class="col2-filter col-filter">
+                    <button type='button' class='btns-filter' id='fel-principal-box'>Fel principal</button>
+                    <button type='button' class='btns-filter' id='desert-box'>Desert</button>
+                    <button type='button' class='btns-filter' id='bauturi-box'>Băuturi</button>
+                </div>
+                <p class="mesaj-filter font-text">Arată toate produsele (30)</p>  
+            </div>
+        </div>
+
+        <!-- 1) Aperitive -->
+        
+        <div class="aperitive-box style-box">
+            <h4 class="font-title aperitive-title">Aperitive</h4>
+            <div class="flex-box">
+            <!-- Each recipe box -->
+            <div class="each-box">
+                <div class="title-recipe-box font-title">
+                    <p class='title-recipe'>Sogan Corbasi-</p>
+                    <p class='price-recipe'>17 lei</p>
+                </div>
+                <p class='description-item font-text'>Supă turcească de usturoi</p>
+                <div class="middle-recipe-box">
+                    <div class="img-recipe">
+                        <img src="images/SOGAN-CORBASI.jpg" alt="SOGAN CORBASI">
+                        <p class="allergens font-text">Alergeni: lactoză,gluten</p>
+                    </div>
+                    <div class="ingredients">
+                        <h5 class="font-title">Ingrediente:</h5>
+                        <ul class="font-text">
+                            <li>Usturoi</li>
+                            <li>Ceapă</li>
+                            <li>Unt</li>
+                            <li>Făină</li>
+                            <li>lapte</li>
+                            <li>Sare</li>
+                            <li>Piper</li>
+                            <li>Chimen</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bottom-recipe-box">
+                    <button type='button' class='add-btn'>Adaugă</button>
+                    <p class="gramaj">1 Porție = 350 grame</p>
+                </div> 
+            </div>
+            <!-- Each recipe box -->
+            <div class="each-box">
+                <div class="title-recipe-box font-title">
+                    <p class='title-recipe'>Cacik-</p>
+                    <p class='price-recipe'>15 lei</p>
+                </div>
+                <p class='description-item font-text'>Supă de iaurt</p>
+                <div class="middle-recipe-box">
+                    <div class="img-recipe">
+                        <img src="images/cacik.jpg" alt="cacik">
+                        <p class="allergens font-text">Alergeni: lactoză,ouă</p>
+                    </div>
+                    <div class="ingredients">
+                        <h5 class="font-title">Ingrediente:</h5>
+                        <ul class="font-text">
+                            <li>Iaurt</li>
+                            <li>Orez</li>
+                            <li>Supă din vită</li>
+                            <li>Unt</li>
+                            <li>Usturoi</li>
+                            <li>Mărar</li>
+                            <li>Ouă</li>
+                            <li>Sare</li>
+                            <li>Piper</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bottom-recipe-box">
+                    <button type='button' class='add-btn'>Adaugă</button>
+                    <p class="gramaj">1 Porție = 280 grame</p>
+                </div> 
+            </div>
+            <!-- Each recipe box -->
+            <div class="each-box">
+                <div class="title-recipe-box font-title">
+                    <p class='title-recipe'>Simit-</p>
+                    <p class='price-recipe'>10 lei</p>
+                </div>
+                <p class='description-item font-text'>Covrigi turcești cu susan</p>
+                <div class="middle-recipe-box">
+                    <div class="img-recipe">
+                        <img src="images/simit.jpg" alt="simit">
+                        <p class="allergens font-text">Alergeni: gluten,susan</p>
+                    </div>
+                    <div class="ingredients">
+                        <h5 class="font-title">Ingrediente:</h5>
+                        <ul class="font-text">
+                            <li>Făină</li>
+                            <li>Apă</li>
+                            <li>Zahăr</li>
+                            <li>Sare</li>
+                            <li>Drojdie</li>
+                            <li>Ulei</li>
+                            <li>Susan</li>
+                            <li>Miere</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bottom-recipe-box">
+                    <button type='button' class='add-btn'>Adaugă</button>
+                    <p class="gramaj">1 Porție = 180 grame</p>
+                </div> 
+            </div>
+            <!-- Each recipe box -->
+            <div class="each-box">
+                <div class="title-recipe-box font-title">
+                    <p class='title-recipe'>Borek-</p>
+                    <p class='price-recipe'>14 lei</p>
+                </div>
+                <p class='description-item font-text'>Plăcintă cu brânză</p>
+                <div class="middle-recipe-box">
+                    <div class="img-recipe">
+                        <img src="images/borek.jpg" alt="borek">
+                        <p class="allergens font-text">Alergeni: gluten,susan,ouă,lactoză</p>
+                    </div>
+                    <div class="ingredients">
+                        <h5 class="font-title">Ingrediente:</h5>
+                        <ul class="font-text">
+                            <li>Foi plăcintă Yufka</li>
+                            <li>Brânză sărată</li>
+                            <li>Pătrunjel</li>
+                            <li>Ouă</li>
+                            <li>Lapte și Iaurt</li>
+                            <li>Boia dulce</li>
+                            <li>Chimen</li>
+                            <li>Susan</li>
+                            <li>Piper</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bottom-recipe-box">
+                    <button type='button' class='add-btn'>Adaugă</button>
+                    <p class="gramaj">1 Porție = 220 grame</p>
+                </div> 
+            </div>
+          </div>
+        </div>
+
+        <!-- 2) Garnituri -->
+        
+        <div class="garnituri-box style-box">
+            <h4 class="font-title garnituri-title">Garnituri</h4>
+            <div class="flex-box">
+            <!-- Each recipe box -->
+            <div class="each-box">
+                <div class="title-recipe-box font-title">
+                    <p class='title-recipe'>Orez turcesc cu fidea-</p>
+                    <p class='price-recipe'>9 lei</p>
+                </div>
+                <p class='description-item font-text'>-</p>
+                <div class="middle-recipe-box">
+                    <div class="img-recipe">
+                        <img src="images/orez-cu-fidea.jpg" alt="orez-cu-fidea">
+                        <p class="allergens font-text">Alergeni: gluten,lactoză</p>
+                    </div>
+                    <div class="ingredients">
+                        <h5 class="font-title">Ingrediente:</h5>
+                        <ul class="font-text">
+                            <li>Orez</li>
+                            <li>Apă</li>
+                            <li>Fidea</li>
+                            <li>Unt</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bottom-recipe-box">
+                    <button type='button' class='add-btn'>Adaugă</button>
+                    <p class="gramaj">1 Porție = 150 grame</p>
+                </div> 
+            </div>
+            <!-- Each recipe box -->
+            <div class="each-box">
+                <div class="title-recipe-box font-title">
+                    <p class='title-recipe'>Salată de vară cu bulgur-</p>
+                    <p class='price-recipe'>12 lei</p>
+                </div>
+                <p class='description-item font-text'>-</p>
+                <div class="middle-recipe-box">
+                    <div class="img-recipe">
+                        <img src="images/salata-bulgur.jpg" alt="salata de vara cu bulgur">
+                        <p class="allergens font-text">Alergeni: gluten</p>
+                    </div>
+                    <div class="ingredients">
+                        <h5 class="font-title">Ingrediente:</h5>
+                        <ul class="font-text">
+                            <li>Bulgur</li>
+                            <li>Apă</li>
+                            <li>Sare</li>
+                            <li>Zuchini</li>
+                            <li>Dovleac</li>
+                            <li>Roșii cherry</li>
+                            <li>Busuioc</li>
+                            <li>Ulei de măsline</li>
+                            <li>Suc de lămâie</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bottom-recipe-box">
+                    <button type='button' class='add-btn'>Adaugă</button>
+                    <p class="gramaj">1 Porție = 220 grame</p>
+                </div> 
+            </div>
+            <!-- Each recipe box -->
+            <div class="each-box">
+                <div class="title-recipe-box font-title">
+                    <p class='title-recipe'>Samphire la aburi-</p>
+                    <p class='price-recipe'>10 lei</p>
+                </div>
+                <p class='description-item font-text'> cu usturoi și ulei de măsline</p>
+                <div class="middle-recipe-box">
+                    <div class="img-recipe">
+                        <img src="images/samphire.jpg" alt="samphire">
+                        <p class="allergens font-text">Alergeni:</p>
+                    </div>
+                    <div class="ingredients">
+                        <h5 class="font-title">Ingrediente:</h5>
+                        <ul class="font-text">
+                            <li>Samphire</li>
+                            <li>Ulei de măsline</li>
+                            <li>Usturoi</li>
+                            <li>Oteț de struguri</li>
+                            <li>Sos de rodie</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bottom-recipe-box">
+                    <button type='button' class='add-btn'>Adaugă</button>
+                    <p class="gramaj">1 Porție = 150 grame</p>
+                </div> 
+            </div>
+            <!-- Each recipe box -->
+            <div class="each-box">
+                <div class="title-recipe-box font-title">
+                    <p class='title-recipe'>Hummus-</p>
+                    <p class='price-recipe'>15 lei</p>
+                </div>
+                <p class='description-item font-text'>varianta turcească</p>
+                <div class="middle-recipe-box">
+                    <div class="img-recipe">
+                        <img src="images/hummus.jpg" alt="hummus">
+                        <p class="allergens font-text">Alergeni:susan</p>
+                    </div>
+                    <div class="ingredients">
+                        <h5 class="font-title">Ingrediente:</h5>
+                        <ul class="font-text">
+                            <li>Năut</li>
+                            <li>Pastă de susan</li>
+                            <li>Suc de lămâie</li>
+                            <li>Usturoi</li>
+                            <li>Ulei de măsline</li>
+                            <li>Sare și Piper</li>
+                            <li>Fulgi de ardei</li>
+                            <li>Boia de ardei afumată</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bottom-recipe-box">
+                    <button type='button' class='add-btn'>Adaugă</button>
+                    <p class="gramaj">1 Porție = 250 grame</p>
+                </div> 
+            </div>
+            <!-- Each recipe box -->
+            <div class="each-box">
+                <div class="title-recipe-box font-title">
+                    <p class='title-recipe'>Mercimek Köftesi-</p>
+                    <p class='price-recipe'>13 lei</p>
+                </div>
+                <p class='description-item font-text'>chiftele din linte</p>
+                <div class="middle-recipe-box">
+                    <div class="img-recipe">
+                        <img src="images/Mercimek-Köftesi.jpg" alt="Mercimek Köftesi">
+                        <p class="allergens font-text">Alergeni:gluten</p>
+                    </div>
+                    <div class="ingredients">
+                        <h5 class="font-title">Ingrediente:</h5>
+                        <ul class="font-text">
+                            <li>Linte roșie</li>
+                            <li>Bulgur</li>
+                            <li>Pastă de tomate</li>
+                            <li>Pastă de ardei</li>
+                            <li>Ulei de măsline</li>
+                            <li>Ceapă</li>
+                            <li>Sare</li>
+                            <li>Suc de lămâie</li>
+                            <li>Pătrunjel</li>
+                            <li>Fulgi de ardei roșu</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bottom-recipe-box">
+                    <button type='button' class='add-btn'>Adaugă</button>
+                    <p class="gramaj">1 Porție = 200 grame</p>
+                </div> 
+            </div>
+            <!-- Each recipe box -->
+            <div class="each-box">
+                <div class="title-recipe-box font-title">
+                    <p class='title-recipe'>Salată de cartofi-</p>
+                    <p class='price-recipe'>15 lei</p>
+                </div>
+                <p class='description-item font-text'>salată orientală</p>
+                <div class="middle-recipe-box">
+                    <div class="img-recipe">
+                        <img src="images/salata-cartofi.jpg" alt="Salată de cartofi">
+                        <p class="allergens font-text">Alergeni:muștar</p>
+                    </div>
+                    <div class="ingredients">
+                        <h5 class="font-title">Ingrediente:</h5>
+                        <ul class="font-text">
+                            <li>Cartofi</li>
+                            <li>Ardei verde/roșu</li>
+                            <li>Castravete murat</li>
+                            <li>Ceapă verde</li>
+                            <li>Roșii cherry</li>
+                            <li>Pătrunjel</li>
+                            <li>Sare,Mentă</li>
+                            <li>Mărar,Muștar</li>
+                            <li>Ulei de măsline</li>
+                            <li>Sos de rodie</li>   
+                        </ul>
+                    </div>
+                </div>
+                <div class="bottom-recipe-box">
+                    <button type='button' class='add-btn'>Adaugă</button>
+                    <p class="gramaj">1 Porție = 250 grame</p>
+                </div> 
+            </div>
+            <!-- Each recipe box -->
+            <div class="each-box">
+                <div class="title-recipe-box font-title">
+                    <p class='title-recipe'>Barbunya Pilaki-</p>
+                    <p class='price-recipe'>12 lei</p>
+                </div>
+                <p class='description-item font-text'>Fasole boabe cu ulei de măsline</p>
+                <div class="middle-recipe-box">
+                    <div class="img-recipe">
+                        <img src="images/Barbunya-Pilaki.jpg" alt="Barbunya Pilaki">
+                        <p class="allergens font-text">Alergeni</p>
+                    </div>
+                    <div class="ingredients">
+                        <h5 class="font-title">Ingrediente:</h5>
+                        <ul class="font-text">
+                            <li>Fasole albă</li>
+                            <li>Ceapă, Roșii</li>
+                            <li>Ardei verde</li>
+                            <li>Morcovi</li>
+                            <li>Usturoi</li>
+                            <li>Ulei de măsline</li>
+                            <li>Suc de lămâie</li>
+                            <li>Pătrunjel</li>
+                            <li>Sare, Zahăr</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bottom-recipe-box">
+                    <button type='button' class='add-btn'>Adaugă</button>
+                    <p class="gramaj">1 Porție = 200 grame</p>
+                </div> 
+            </div>
+          </div>
+        </div>
+
+        <!-- 3) Fel principal -->
+        
+        <div class="fel-principal-box style-box">
+            <h4 class="font-title fel-principal-title">Fel principal</h4>
+            <div class="flex-box">
+            <!-- Each recipe box -->
+            <div class="each-box">
+                <div class="title-recipe-box font-title">
+                    <p class='title-recipe'>Iskender Kebab-</p>
+                    <p class='price-recipe'>23lei</p>
+                </div>
+                <p class='description-item font-text'>kebab turcesc cu carne de miel</p>
+                <div class="middle-recipe-box">
+                    <div class="img-recipe">
+                        <img src="images/Iskender-kebab.jpg" alt="ISKENDER KEBAB">
+                        <p class="allergens font-text">Alergeni:gluten</p>
+                    </div>
+                    <div class="ingredients">
+                        <h5 class="font-title">Ingrediente:</h5>
+                        <ul class="font-text">
+                            <li>Ceapă albă</li>
+                            <li>Zeamă de lămâie</li>
+                            <li>Carne de miel</li>
+                            <li>Chiflă</li>
+                            <li>Ardei roșu și verde</li>
+                            <li>Sos de roșii</li>
+                            <li>Sare,Piper</li>
+                            <li>Usturoi</li>
+                            <li>Boia ardei</li>
+                            <li>Ulei de măsline</li>
+                            <li>Ienihabar</li> 
+                        </ul>
+                    </div>
+                </div>
+                <div class="bottom-recipe-box">
+                    <button type='button' class='add-btn'>Adaugă</button>
+                    <p class="gramaj">1 Porție = 430 grame</p>
+                </div> 
+            </div>
+        
+            <!-- Each recipe box -->
+            <div class="each-box">
+                <div class="title-recipe-box font-title">
+                    <p class='title-recipe'>Lahmacun-</p>
+                    <p class='price-recipe'>21lei</p>
+                </div>
+                <p class='description-item font-text'>pizza turcească</p>
+                <div class="middle-recipe-box">
+                    <div class="img-recipe">
+                        <img src="images/lahmacun.jpg" alt="lahmacun">
+                        <p class="allergens font-text">Alergeni:gluten</p>
+                    </div>
+                    <div class="ingredients">
+                        <h5 class="font-title">Ingrediente:</h5>
+                        <ul class="font-text">
+                            <li>Făină</li>
+                            <li>Drojdie</li>
+                            <li>Ulei măsline</li>
+                            <li>Zahăr,sare</li>
+                            <li>Carne de vită</li>
+                            <li>Ceapă</li>
+                            <li>Pătrunjel</li>
+                            <li>Pastă de ardei</li>
+                            <li>Roșii tocate</li>
+                            <li>Boia ardei</li>
+                            <li>Chili,piper</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bottom-recipe-box">
+                    <button type='button' class='add-btn'>Adaugă</button>
+                    <p class="gramaj">1 Porție = 400 grame</p>
+                </div> 
+            </div>
+            <!-- Each recipe box -->
+            <div class="each-box">
+                <div class="title-recipe-box font-title">
+                    <p class='title-recipe'>Dolma-</p>
+                    <p class='price-recipe'>25lei</p>
+                </div>
+                <p class='description-item font-text'>sarmale turcești</p>
+                <div class="middle-recipe-box">
+                    <div class="img-recipe">
+                        <img src="images/dolma.jpg" alt="dolma">
+                        <p class="allergens font-text">Alergeni:gluten</p>
+                    </div>
+                    <div class="ingredients">
+                        <h5 class="font-title">Ingrediente:</h5>
+                        <ul class="font-text">
+                            <li>Carne de vită</li>
+                            <li>Orez,Vinete</li>
+                            <li>Dovlecei</li>
+                            <li>Ardei gras</li>
+                            <li>Roșii,ceapă</li>
+                            <li>Frunze de viță</li>
+                            <li>Paste de ardei și de roșii</li>
+                            <li>Chili,piper</li>
+                            <li>Mărar, pătrunjel</li>
+                            <li>Suc de roșii, ulei</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bottom-recipe-box">
+                    <button type='button' class='add-btn'>Adaugă</button>
+                    <p class="gramaj">1 Porție = 440 grame</p>
+                </div> 
+            </div>
+            <!-- Each recipe box -->
+            <div class="each-box">
+                <div class="title-recipe-box font-title">
+                    <p class='title-recipe'>Tavuk Siş-</p>
+                    <p class='price-recipe'>25lei</p>
+                </div>
+                <p class='description-item font-text'>kebab din pui</p>
+                <div class="middle-recipe-box">
+                    <div class="img-recipe">
+                        <img src="images/Tavuk-Siş.jpg" alt="Tavuk Siş">
+                        <p class="allergens font-text">Alergeni:gluten,lactoză</p>
+                    </div>
+                    <div class="ingredients">
+                        <h5 class="font-title">Ingrediente:</h5>
+                        <ul class="font-text">
+                            <li>Piept de pui</li>
+                            <li>Ceapă</li>
+                            <li>Usturoi</li>
+                            <li>Iaurt</li>
+                            <li>Ulei de măsline</li>
+                            <li>Pastă de roșii</li>
+                            <li>Oregano</li>
+                            <li>Boia ardei</li>
+                            <li>Chili,piper</li>
+                            <li>Sumac</li>
+                            </ul>
+                    </div>
+                </div>
+                <div class="bottom-recipe-box">
+                    <button type='button' class='add-btn'>Adaugă</button>
+                    <p class="gramaj">1 Porție = 440 grame</p>
+                </div> 
+            </div>
+            <!-- Each recipe box -->
+            <div class="each-box">
+                <div class="title-recipe-box font-title">
+                    <p class='title-recipe'>Supă Ezogelin-</p>
+                    <p class='price-recipe'>25lei</p>
+                </div>
+                <p class='description-item font-text'>supă din linte, bulgur și orez</p>
+                <div class="middle-recipe-box">
+                    <div class="img-recipe">
+                        <img src="images/Supă-Ezogelin.jpg" alt="Supă Ezogelin">
+                        <p class="allergens font-text">Alergeni:gluten,lactoză</p>
+                    </div>
+                    <div class="ingredients">
+                        <h5 class="font-title">Ingrediente:</h5>
+                        <ul class="font-text">
+                            <li>Ceapă</li>
+                            <li>Linte roșie</li>
+                            <li>Orez</li>
+                            <li>Bulgur</li>
+                            <li>Făină</li>
+                            <li>Unt</li>
+                            <li>Pastă de ardei roșu</li>
+                            <li>Sos de roșii</li>
+                            <li>Mentă uscată</li>
+                            <li>Sare,lămâie</li>
+                            <li>Fulgi de ardei iute</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bottom-recipe-box">
+                    <button type='button' class='add-btn'>Adaugă</button>
+                    <p class="gramaj">1 Porție = 350 grame</p>
+                </div> 
+            </div>
+          </div>
+        </div>
+        <!-- 4) Desert -->
+        <div class="desert-box style-box">
+            <h4 class="font-title desert-title">Desert</h4>
+            <div class='flex-box'>
+             <!-- Each recipe box -->
+            <div class="each-box">
+                <div class="title-recipe-box font-title">
+                    <p class='title-recipe'>Sütlaç-</p>
+                    <p class='price-recipe'>15lei</p>
+                </div>
+                <p class='description-item font-text'>orez cu lapte</p>
+                <div class="middle-recipe-box">
+                    <div class="img-recipe">
+                        <img src="images/sutlac.jpg" alt="sutlac">
+                        <p class="allergens font-text">Alergeni:gluten,lactoză,ouă</p>
+                    </div>
+                    <div class="ingredients">
+                        <h5 class="font-title">Ingrediente:</h5>
+                        <ul class="font-text">
+                            <li>Orez</li>
+                            <li>Lapte de vacă</li>
+                            <li>Ouă</li>
+                            <li>Zahăr</li>
+                            <li>Amidon de porumb</li>
+                            <li>Zahăr vanilat</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bottom-recipe-box">
+                    <button type='button' class='add-btn'>Adaugă</button>
+                    <p class="gramaj">1 Porție = 180 grame</p>
+                </div> 
+            </div>
+             <!-- Each recipe box -->
+            <div class="each-box">
+                <div class="title-recipe-box font-title">
+                    <p class='title-recipe'>Kadayif-</p>
+                    <p class='price-recipe'>15lei</p>
+                </div>
+                <p class='description-item font-text'>desert cu fidea și nucă</p>
+                <div class="middle-recipe-box">
+                    <div class="img-recipe">
+                        <img src="images/kadayif.jpg" alt="kadayif">
+                        <p class="allergens font-text">Alergeni:gluten,lactoză</p>
+                    </div>
+                    <div class="ingredients">
+                        <h5 class="font-title">Ingrediente:</h5>
+                        <ul class="font-text">
+                            <li>Fidea</li>
+                            <li>Unt</li>
+                            <li>Nucă</li>
+                            <li>Scorțișoară</li>
+                            <li>Zahăr</li>
+                            <li>Zeamă de lămâie</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bottom-recipe-box">
+                    <button type='button' class='add-btn'>Adaugă</button>
+                    <p class="gramaj">1 Porție = 180 grame</p>
+                </div> 
+            </div>
+             <!-- Each recipe box -->
+            <div class="each-box">
+                <div class="title-recipe-box font-title">
+                    <p class='title-recipe'>Baclava-</p>
+                    <p class='price-recipe'>16lei</p>
+                </div>
+                <p class='description-item font-text'>-</p>
+                <div class="middle-recipe-box">
+                    <div class="img-recipe">
+                        <img src="images/baclava.jpg" alt="baclava">
+                        <p class="allergens font-text">Alergeni:gluten,lactoză,nuci</p>
+                    </div>
+                    <div class="ingredients">
+                        <h5 class="font-title">Ingrediente:</h5>
+                        <ul class="font-text">
+                            <li>Nucă</li>
+                            <li>Foi de plăcinte</li>
+                            <li>Unt</li>
+                            <li>Ulei</li>
+                            <li>Fistic</li>
+                            <li>Zeamă de lămâie</li>
+                            <li>Păstaie de vanilie</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bottom-recipe-box">
+                    <button type='button' class='add-btn'>Adaugă</button>
+                    <p class="gramaj">1 Porție = 150 grame</p>
+                </div> 
+            </div>
+             <!-- Each recipe box -->
+            <div class="each-box">
+                <div class="title-recipe-box font-title">
+                    <p class='title-recipe'>Şekerpare-</p>
+                    <p class='price-recipe'>14 lei</p>
+                </div>
+                <p class='description-item font-text'>prăjiturică turcească</p>
+                <div class="middle-recipe-box">
+                    <div class="img-recipe">
+                        <img src="images/sekerpare.jpg" alt="sekerpare">
+                        <p class="allergens font-text">Alergeni:gluten,ouă,lactoză,nuci</p>
+                    </div>
+                    <div class="ingredients">
+                        <h5 class="font-title">Ingrediente:</h5>
+                        <ul class="font-text">
+                            <li>Ouă</li>
+                            <li>Făină</li>
+                            <li>Griș</li>
+                            <li>Sare, Zahăr</li>
+                            <li>Ulei</li>
+                            <li>Praf de copt</li>
+                            <li>Midgdale și fistic</li>
+                            <li>Zeamă de lămâie</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bottom-recipe-box">
+                    <button type='button' class='add-btn'>Adaugă</button>
+                    <p class="gramaj">1 Porție = 180 grame</p>
+                </div> 
+            </div>
+             <!-- Each recipe box -->
+            <div class="each-box">
+                <div class="title-recipe-box font-title">
+                    <p class='title-recipe'>Aşure-</p>
+                    <p class='price-recipe'>17 lei</p>
+                </div>
+                <p class='description-item font-text'>desert de post cu fructe ucate și nuci</p>
+                <div class="middle-recipe-box">
+                    <div class="img-recipe">
+                        <img src="images/asure.jpg" alt="asure">
+                        <p class="allergens font-text">Alergeni:gluten,nuci,alune,sulfiți</p>
+                    </div>
+                    <div class="ingredients">
+                        <h5 class="font-title">Ingrediente:</h5>
+                        <ul class="font-text">
+                            <li>Nuci și alune</li>
+                            <li>Griș</li>
+                            <li>Caise uscate</li>
+                            <li>Zahăr brun</li>
+                            <li>Smochine uscate</li>
+                            <li>Arpacaș</li>
+                            <li>Apă de trandafir</li>
+                            <li>Afine, Stafide</li>
+                            <li>Rodie</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bottom-recipe-box">
+                    <button type='button' class='add-btn'>Adaugă</button>
+                    <p class="gramaj">1 Porție = 180 grame</p>
+                </div> 
+            </div>
+           </div>
+          </div>
+        </div>
+        <!-- 5) Bauturi -->
+        <div class="bauturi-box style-box">
+            <h4 class="font-title bauturi-title">Băuturi</h4>
+            <div class='flex-box'>
+            <!-- Each recipe box -->
+            <div class="each-box">
+                <div class="title-recipe-box font-title">
+                    <p class='title-recipe'>Ayran-</p>
+                    <p class='price-recipe'>12 lei</p>
+                </div>
+                <p class='description-item font-text'>Băutură din iaurt</p>
+                <div class="middle-recipe-box">
+                    <div class="img-recipe">
+                        <img src="images/ayran.jpg" alt="ayran">
+                        <p class="allergens font-text">Alergeni: lactoză</p>
+                    </div>
+                    <div class="ingredients">
+                        <h5 class="font-title">Ingrediente:</h5>
+                        <ul class="font-text">
+                            <li>Usturoi</li>
+                            <li>Ceapă</li>
+                            <li>Unt</li>
+                            <li>Făină</li>
+                            <li>Lapte</li>
+                            <li>Sare și piper</li>
+                            <li>Chimen</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bottom-recipe-box">
+                    <button type='button' class='add-btn'>Adaugă</button>
+                    <p class="gramaj">1 Porție = 350 ml</p>
+                </div> 
+            </div>
+            <!-- Each recipe box -->
+            <div class="each-box">
+                <div class="title-recipe-box font-title">
+                    <p class='title-recipe'>Tükenmez -</p>
+                    <p class='price-recipe'>17 lei</p>
+                </div>
+                <p class='description-item font-text'>Băutură non-alcolică fermentată din fructe(Serbet)</p>
+                <div class="middle-recipe-box">
+                    <div class="img-recipe">
+                        <img src="images/tukenmez.jpg" alt="tukenmez">
+                        <p class="allergens font-text">Alergeni:</p>
+                    </div>
+                    <div class="ingredients">
+                        <h5 class="font-title">Ingrediente:</h5>
+                        <ul class="font-text">
+                            <li>Măr roșu și verde</li>
+                            <li>Pară</li>
+                            <li>Struguri verzi</li>
+                            <li>Prune</li>
+                            <li>Vișine</li>
+                            <li>Zahăr</li>
+                            <li>Năut</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bottom-recipe-box">
+                    <button type='button' class='add-btn'>Adaugă</button>
+                    <p class="gramaj">1 Porție = 300 ml</p>
+                </div> 
+            </div>
+            <!-- Each recipe box -->
+            <div class="each-box">
+                <div class="title-recipe-box font-title">
+                    <p class='title-recipe'>Salep -</p>
+                    <p class='price-recipe'>15 lei</p>
+                </div>
+                <p class='description-item font-text'>Băutură din lapte</p>
+                <div class="middle-recipe-box">
+                    <div class="img-recipe">
+                        <img src="images/salep.jpg" alt="salep">
+                        <p class="allergens font-text">Alergeni:lactoză,nuci</p>
+                    </div>
+                    <div class="ingredients">
+                        <h5 class="font-title">Ingrediente:</h5>
+                        <ul class="font-text">
+                            <li>Lapte</li>
+                            <li>Amidon de porumb</li>
+                            <li>Zahăr</li>
+                            <li>Scorțișoară</li>
+                            <li>Nucă de cocos</li>
+                            <li>Fistic mărunțit</li>
+                            <li>Apă de trandafiri</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bottom-recipe-box">
+                    <button type='button' class='add-btn'>Adaugă</button>
+                    <p class="gramaj">1 Porție = 350 ml</p>
+                </div> 
+            </div>
+            <!-- Each recipe box -->
+            <div class="each-box">
+                <div class="title-recipe-box font-title">
+                    <p class='title-recipe'>Cafea turcească -</p>
+                    <p class='price-recipe'>12 lei</p>
+                </div>
+                <p class='description-item font-text'>-</p>
+                <div class="middle-recipe-box">
+                    <div class="img-recipe">
+                        <img src="images/cafea.jpg" alt="cafea turcească">
+                        <p class="allergens font-text">Alergeni:</p>
+                    </div>
+                    <div class="ingredients">
+                        <h5 class="font-title">Ingrediente:</h5>
+                        <ul class="font-text">
+                            <li>Apă filtrată</li>
+                            <li>Cafea turcească</li>
+                            <li>Zahăr(opțional)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bottom-recipe-box">
+                    <button type='button' class='add-btn'>Adaugă</button>
+                    <p class="gramaj">1 Porție = 250 ml</p>
+                </div> 
+             </div>
+
+            </div>
+        </div>
+      </div>
+
+    </section>
+    
+    <footer id='footer'>
+        <div class="footer-info">
+            <div class="social">
+                <p class='contact-title font-title'>Ne găsiți și pe:</p>
+                <div class="social-links">
+                    <a href='#'><ion-icon name="logo-facebook" class='social-icon fb'></ion-icon></a>
+                    <a href='#'><ion-icon name="logo-instagram" class='social-icon inst'></ion-icon></a>
+                    <a href='#'><ion-icon name="logo-twitter" class='social-icon twt'></ion-icon></a>
+                    <a href='#'><ion-icon name="logo-youtube" class='social-icon yt'></ion-icon></a>
+                </div>
+            </div>
+            <div class="contact font-title">
+                <p class='contact-title font-title'>Contact:</p>
+                <div class="contact-info font-text">
+                    <a href='tel:0740000000' class="phone-f">0740 000 000</a>
+                    <a href='mailto:mâncare-turcească@livrare.ro' class="email-f">mâncare-turcească@livrare.ro</a>
+                    <a href='#' class="email-f">Str. Frunzișului, nr. 11-13Z, Cluj-Napoca</a>
+                </div>
+            </div>
+        </div>
+        <div class="copy-rights font-text">
+            <p>Orar zilnic: 9-21</p>
+            <p>© Toate drepturile rezervate - Mâncare turcească acasă</p>
+        </div>
+    </footer>
+    <script src="scripts/script.js"></script>
+</body>
+</html>

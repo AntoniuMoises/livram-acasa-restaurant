@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/style.css">
+        <title>Livrăm acasă- mâncare turcească</title>
+        <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
+        <link rel="icon" type="image/png" sizes="16x16" href="styles/favicon-16x16.png">
+    </head>
+<body>
+    <nav>
+        <img src="images/logo1.png" alt="Logo"> 
+        <div class="nav-btns show-btns">
+            <a href="#" class="menu">Meniu</a>
+            <a href="#" class="login" id="login">Login</a>
+            <a href="#" id='userId' >UserName</a>
+            <a href="#" class="cos" id='cos' >Cos<span id='small-quantity'>3</span></a>  
+            <!-- Cart box -->
+            <div class="cart-box">
+                <div class="each-item-cart">
+                    <div class="title-item-cart">Hummus</div>
+                    <div class="quantity-item-cart">1</div>
+                    <div class="price-item-cart">15 lei</div>
+                </div>
+                <div class="total-price-cart">Total: 15 lei</div>
+            </div>
+            <!-- Login box -->
+            <div class="login-box">
+                <form class="form">
+                    <input type="text" placeholder="Nume utilizator" class='hover-over-input'>
+                    <input type="password" placeholder="Parolă" class='hover-over-input'>
+                    <button id="login-form">Login</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <section class="comanda-box">
+        <h3 class='font-title'>Comanda ta</h3>
+        <table class="table-content">
+            <thead >
+                <tr class='font-title'>
+                    <th>Nr.</th>
+                    <th>Produs</th>
+                    <th>Cantitate</th>
+                    <th>Preț</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class='each-item-order font-text'>
+                    <td class='number-order'>1</td>
+                    <td class='name-order'>Hummus</td>
+                    <td class='quantity-order'>
+                        <ion-icon name="add-circle-outline" class='icon-q'></ion-icon>
+                        <input class='quantity-real' value='1'>
+                        <ion-icon name="remove-circle-outline" class='icon-q'></ion-icon>
+                    </td>
+                    <td class='price-order'>15 lei</td>
+                </tr>
+                <tr class='each-item-order font-text'>
+                    <td class='number-order'>2</td>
+                    <td class='name-order'>Hummus</td>
+                    <td class='quantity-order'>
+                        <ion-icon name="add-circle-outline" class='icon-q'></ion-icon>
+                        <input class='quantity-real' value='1'>
+                        <ion-icon name="remove-circle-outline" class='icon-q'></ion-icon>
+                    </td>
+                    <td class='price-order'>15 lei</td>
+                </tr>
+                <tr class='each-item-order font-text'>
+                    <td class='number-order'>3</td>
+                    <td class='name-order'>Hummus</td>
+                    <td class='quantity-order'>
+                        <ion-icon name="add-circle-outline" class='icon-q'></ion-icon>
+                        <input class='quantity-real' value='1'>
+                        <ion-icon name="remove-circle-outline" class='icon-q'></ion-icon>
+                    </td>
+                    <td class='price-order'>15 lei</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr class='font-title'>
+                    <th colspan="3">Total:</th>
+                    <td colspan="4">150 lei</td>
+                </tr>
+            </tfoot>
+        </table>
+        <!-- Hidden check message -->
+        <div class="hidden-section-order">
+            <div class="hidden-table-msg">
+                <ion-icon name="checkmark-outline"></ion-icon>
+                <p class="message-order font-text">Timp aproximativ de livrare: 45-60 minute</p>
+            </div>
+            <div class="hidden-table-msg">
+                <ion-icon name="checkmark-outline"></ion-icon>
+                <p class="message-order font-text">Ridicare comandă de la punct de lucru: durată 30 minute</p>
+            </div>
+            <div class="hidden-table-msg">
+                <ion-icon name="checkmark-outline"></ion-icon>
+                <p class="message-order font-text">Livrare gratuită în Cluj-Napoca</p>
+            </div>
+        </div>
+        <!-- Select method to pay -->
+        <div class="payment">
+            <h5 class="font-title">Alege modalitatea de plată:</h5>
+            <div class="method-payment">
+                <select class='font-text'>
+                    <option value="0">Plată cu cardul- online</option>
+                    <option value="1">Plată ramburs- la livrare</option>
+
+                </select>
+            </div>
+        </div>
+        <!-- User dates for delivery -->
+        <div class="delivery-register">
+            <div class="form-delivery-box" id='delivery-info-box'>
+                <h5 class="font-title">Date de livrare:</h5>
+                <form>
+                    <div class="control-field">
+                        <input type="text" placeholder="Nume" id='name' required>
+                        <small>Error message</small>
+                    </div>
+                    <div class="control-field">
+                        <input type="text" placeholder="Prenume" id='first-name' required>
+                        <small>Error message</small>
+                    </div>
+                    <div class="control-field">
+                        <input type="text" placeholder="Adresă de livrare" id='address' required>
+                        <small>Error message</small>
+                    </div>
+                    <div class="control-field">
+                        <input type="text" placeholder="Telefon" id='phone' required>
+                        <small>Error message</small>
+                    </div>
+                    <label class="container-check" >Cluj-Napoca
+                        <input type="checkbox" id='city' required >
+                        <span class="checkmark"></span>
+                    </label>
+                </form>
+            </div>
+            <!-- Register account if user hasn't one (user is not logged in) -->
+            <label class="container-check" id='show-register-box'>Vrei să înregistrezi un cont?
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+        </div>
+        <!-- Show fields to complete the registration -->
+        <div class="form-delivery-box" id='register-info-box'>
+            <h5 class="font-title">Înregistrează contul:</h5>
+            <form>
+                <div class="control-field">
+                    <input type="text" placeholder="Nume de utilizator" id='username' required>
+                    <small>Error message</small>
+                </div>
+                <div class="control-field">
+                    <input type="text" placeholder="Parolă" id='password' required>
+                    <small>Error message</small>
+                </div>
+                <div class="control-field">
+                    <input type="password" placeholder="Repetă parola" id='password2' required>
+                    <small>Error message</small>
+                </div>
+                <div class="control-field">
+                    <input type="email" placeholder="Email" id='email' required>
+                    <small>Error message</small>
+                </div>
+                <button id="register-acc-btn">Înregistrez contul</button>
+            </form>
+        </div>
+        <!-- Order button -->
+        <div class="order-btn-box font-title">
+            <button id="order-btn">Comandă</button>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-info">
+            <div class="social">
+                <p class='contact-title font-title'>Ne găsiți și pe:</p>
+                <div class="social-links">
+                    <a href='#'><ion-icon name="logo-facebook" class='social-icon fb'></ion-icon></a>
+                    <a href='#'><ion-icon name="logo-instagram" class='social-icon inst'></ion-icon></a>
+                    <a href='#'><ion-icon name="logo-twitter" class='social-icon twt'></ion-icon></a>
+                    <a href='#'><ion-icon name="logo-youtube" class='social-icon yt'></ion-icon></a>
+                </div>
+            </div>
+            <div class="contact font-title">
+                <p class='contact-title font-title'>Contact:</p>
+                <div class="contact-info font-text">
+                    <a href='tel:0740000000' class="phone-f">0740 000 000</a>
+                    <a href='mailto:mâncare-turcească@livrare.ro' class="email-f">mâncare-turcească@livrare.ro</a>
+                    <a href='#' class="email-f">Str. Frunzișului, nr. 11-13Z, Cluj-Napoca</a>
+                </div>
+            </div>
+        </div>
+        <div class="copy-rights font-text">
+            <p>Orar zilnic: 9-21</p>
+            <p>© Toate drepturile rezervate - Mâncare turcească acasă</p>
+        </div>
+    </footer>
+</body>
+</html>
