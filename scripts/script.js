@@ -1,6 +1,3 @@
-
-
-
 // Data controler 
 let dataController = (function() {
 
@@ -17,7 +14,8 @@ let dataController = (function() {
            let titleItem = titleEl.slice(0,titleEl.length-1);
            let priceEl = containerProduct.querySelector('.price-recipe').textContent;
            let priceItem = priceEl.slice(0,priceEl.length-3);
-           storeInfoProduct = [{title:titleItem, price:priceItem, quantity:1}];
+           let imageItem = containerProduct.querySelector('.img-recipe img').src;
+           storeInfoProduct = [{title:titleItem, price:priceItem, quantity:1,img:imageItem}];
            
         //Check if item is already in array
            let result = storeAllItemCart.map(obj => {
@@ -51,6 +49,11 @@ let dataController = (function() {
 
         UIController.calcTotalPriceCart(storeAllItemCart);
         UIController.updateCountCart(storeAllItemCart);
+    },
+    // II. Order page
+    // Save array of items in local storage
+    saveData:function(){
+        localStorage.setItem('itemsOrder',JSON.stringify(storeAllItemCart));
     }
 
   };  
@@ -102,12 +105,13 @@ let UIController = (function(){
                 itemBox[i].style.display = 'flex';
                 resultFilter.textContent = `Arată toate cele ${eachItem.length} de produse`;
             }
+            
         },
-
 
         displayCartBox:function(e){
             if(cartBoxContainer.style.display === 'none'){
                 cartBoxContainer.style.display ='block';
+                
             }else{
                 cartBoxContainer.style.display ='none';
             }
@@ -119,8 +123,8 @@ let UIController = (function(){
                 cartOpenBtn.style.display = 'inline-block';
                 let rule = (a,b) => a + b;
                 let count = storeItems.map(item => item[0].quantity).reduce(rule);
-                console.log(count);
                 numberItemsCart.textContent= count; 
+                 
             }else{
                 cartOpenBtn.style.display = 'none';
             }
@@ -134,8 +138,8 @@ let UIController = (function(){
             <div class="price-item-cart">${currentItem[0].price} lei</div>
             <ion-icon name="close-circle-outline" class='cart-box-delete-itm'></ion-icon>`;
             newItem.className = 'each-item-cart';
-            cartBoxForItems.appendChild(newItem);
-            
+            cartBoxForItems.appendChild(newItem);    
+             
         },
 
         removeItemFromCart:function(e){
@@ -159,19 +163,15 @@ let UIController = (function(){
             if(storeItems.length >= 1){ 
               let rule = (a,b) => a + b;
               let total = storeItems.map(item => item[0].quantity * item[0].price).reduce(rule);
-              totalEl.textContent = `${total} lei`; 
+              totalEl.textContent = `Total: ${total} lei`; 
             }else{
                 storeItems = [];
                 total = '';
                 this.displayCartBox();
+            }   
+        },
 
-
-            }
-            
-            
-        }
-
-
+       
     };
         
 })();
@@ -229,11 +229,15 @@ let appController = (function(dataCtrl, UICtrl){
       if(e.target.classList.contains('cart-box-delete-itm')){
         dataController.remoteItemFromArray(e);
         UIController.removeItemFromCart(e);
-        
-      }
-      
+      } 
    });
 
+//    II. Order page
+   document.querySelector('#cart-btn').addEventListener('click',function(){
+    dataController.saveData();
+
+   });
+      
    UIController.showAllItem();
 })(dataController,UIController);
 

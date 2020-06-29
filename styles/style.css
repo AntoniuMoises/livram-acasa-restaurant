@@ -93,15 +93,17 @@ nav{
 }
 .nav-btns{
     position: relative;
+    padding-right: 30px;
 }
 
 .nav-btns a{
-    padding: 3px;
+    padding: 3px 2px;
     margin:0 3px;
     color:#fff;
     text-decoration: none;
     transition: all 0.5s;
 }
+
 
 .nav-btns a:hover{
     color:var(--third-color);
@@ -175,7 +177,7 @@ nav{
 }
 .cos{
     cursor: pointer;
-    padding-left: 5px;
+    padding-left: 50px;
     position: relative;
     display: none;
 }
@@ -185,29 +187,31 @@ nav{
     border-radius: 50%;
     color:var(--main-color);
     font-size: 0.75rem;
-    right:-25px;
-    top:0px;
+    right:-20px;
+    top:-8px;
     padding:2px 6px; 
     transition: all 0.4s;
 }
 .cos:hover #small-quantity{
-    background-color:var(--main-color);
-    color:#fff;
+    background-color:#643a20;
+    color:var(--third-color);
 }
 .cart-box{
     border-top:1px solid #fff;
     border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
     position: absolute;
     height: auto;
-    width:210px;
+    width:240px;
     background-color: var(--main-color);
     right:0px;
-    top:40px;
+    top:44px;
     color:#fff;
-    padding: 5px 20px 0 20px;
+    padding: 5px 20px 0 10px;
     z-index:1000;
     display: none;
 }
+
 
 .cart-btn{
     font-size:0.85rem;
@@ -224,32 +228,33 @@ nav{
 .each-item-cart{
     display: flex;
     justify-content: space-between;
-    padding:5px;  
+    padding:5px 0;  
     transition: all 0.2s;
 }
+
 .title-item-cart{
     flex:1.75;
 }
 .quantity-item-cart{
     flex-basis: 30px;
+    padding: 0 3px;
 }
 .price-item-cart{
     flex-basis: 40px;
 }
 .each-item-cart:hover {
-    opacity: 0.7;
+    opacity: 0.8;
 }
 .each-item-cart div{
-    font-size:0.8rem;
+    font-size:0.85rem;
     cursor: default;
 }
 .cart-box-delete-itm{
     color:#fff;
     cursor: pointer;
-    font-size:1.2rem;
+    font-size:1.3rem;
     position: absolute;
-    right:2px;
-
+    right:0px;
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s, opacity 0.3s linear;
@@ -619,13 +624,15 @@ h5{
     border-radius: 2px;
     table-layout: fixed;
     border-collapse: collapse;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     min-width: 320px;
+    margin:20px 0;
 }
 .table-content thead,
 .table-content tfoot{
     color:#ffff;
     font-weight: normal;
+    padding: 15px 0;  
 }
 .table-content thead tr{
     text-align: center;
@@ -634,10 +641,40 @@ h5{
 .table-content td{
     padding: 10px 12px;
     text-align: center;
+    vertical-align: middle;
+    
 }
 .table-content tbody tr{
     background-color: var(--second-color);
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #fff;  
+}
+.table-content tbody tr:last-child{
+    border-bottom: none;
+}
+
+.img-item-order{
+    display: flex;
+    max-width: 180px;
+    max-height: 80px;
+}
+.size{
+    font-size:1.1rem;
+}
+.table-content span{
+    position: relative;
+}
+.order-close{
+    color: rgba(0,0,0,0.4);
+    cursor: pointer;
+    position:absolute;
+    font-size:1.5rem;
+    right:-45px;
+    top:-1px;
+    transition:all 0.2s;
+}
+.order-close:hover{
+    color: rgba(0,0,0,1);
+    transform: scale(1.2);
 }
 
 .icon-q{
@@ -884,7 +921,7 @@ select{
 }
 /* Register box  */
 #register-acc-btn{
-    background-color: var(--third-color);
+    background-color: var(--main-color);
     border-radius:4px;
     border:none;
     cursor: pointer;
@@ -895,7 +932,7 @@ select{
     transition: all 0.3s;
 }
 #register-acc-btn:hover{
-    background-color: var(--main-color);
+    background-color: var(--third-color);
     color:#fff;
 }
 
@@ -1023,6 +1060,9 @@ footer{
         margin:0 auto;
         max-width: 550px;
     }
+    .table-content{
+        min-width: 500px;
+    }
     footer{
         padding: 0 10%;
     }
@@ -1056,6 +1096,9 @@ footer{
     .nav-menu{
         margin:0 auto;
         max-width: 650px;
+    }
+    .table-content{
+        min-width: 600px;
     }
 }
 
