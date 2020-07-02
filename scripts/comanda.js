@@ -1,17 +1,3 @@
-
-
-let dataController= (function(){
-
-    return{
-
-
-    }
-
-
-
-})();
-
-
 let UIController = (function(){
     
     return {
