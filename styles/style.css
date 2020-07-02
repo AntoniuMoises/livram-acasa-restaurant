@@ -1052,9 +1052,10 @@ select{
     transform: translate(-50%,-50%);
     background-color: rgb(235, 235, 235);
     width: 50%;
-    height: 50vh;
+    height: 55vh;
     border-radius: 10px;
     padding: 2%;
+    z-index:2000;
 }
 .modal-content h1{
     font-size: 1.6rem;
@@ -1095,7 +1096,7 @@ select{
 .deliveryAddress{
     font-weight: bold;
     font-size: 1rem;
-    padding: 5px 0;
+    padding: 15px 0;
 }
 
 .show-modal{
@@ -1248,6 +1249,10 @@ footer{
     .table-content{
         min-width: 500px;
     }
+    .modal-content{
+        height:45vh;
+        width: 45%;
+    }
     footer{
         padding: 0 10%;
     }
@@ -1301,6 +1306,10 @@ footer{
     }
     .form-delivery-box{
         width: 450px;
+    }
+    .modal-content{
+        height: 35vh;
+        width: 35%;
     }
 }
 

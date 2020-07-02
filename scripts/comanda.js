@@ -138,8 +138,7 @@ let UIController = (function(){
         },
 
         toggleModal:function(modal){
-            modal.classList.toggle('show-modal');
-            
+            modal.classList.toggle('show-modal');   
         },
 
         windowClose:function(modal){
@@ -166,9 +165,11 @@ let UIController = (function(){
             }
             new MyTimer(function(val) {
                 msg.textContent = `Pagina se va inchide automat în ${val} secunde`;
-            });
-            
-                  
+            });         
+        },
+        displayAddress:function(input,address){
+            address.style.display = 'block';
+            address.textContent = `Cluj-Napoca, ${input}`;
         }
     }
 
@@ -176,12 +177,9 @@ let UIController = (function(){
 
 
 let appController = (function(){
-
     ///////// I. Variables for each event handler
-
     const itemsOrder = JSON.parse(localStorage.getItem('itemsOrder'));
     const table = document.querySelector('.table-content tbody');
-    const input = table.querySelectorAll('.quantity-real');
 
     // Delivery variables
     const delName = document.querySelector('#name');
@@ -207,6 +205,7 @@ let appController = (function(){
     const closeModal = document.querySelector('.close-modal');
     const classModal = 'show-modal';
     const countDown = document.querySelector('.close-msg');
+    const addressDOM = document.querySelector('.deliveryAddress');
 
 
     ////////////// II: Event listeners
@@ -252,7 +251,8 @@ let appController = (function(){
             UIController.closeOnTime(10000,modal,classModal);
             // Show the countdown 
             UIController.countDown(countDown,10);
-            // Send to home page after confirm page
+             // Display user adress on modal
+             UIController.displayAddress(delAddress.value,addressDOM);
             
             
         }     
