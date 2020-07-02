@@ -221,6 +221,9 @@ nav{
     width: 110px;
     padding: 3px 0;
 }
+.cart-btn a{
+    display: block;
+}
 .box{
     display: flex;
     justify-content: center;
