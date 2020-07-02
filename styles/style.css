@@ -55,6 +55,7 @@ body{
     background-color:rgb(235, 231, 227);;
     margin: 0;
 }
+
 .font-title{
     font-family: 'lato',Arial, Helvetica, sans-serif;
 }
@@ -391,7 +392,7 @@ h3::after{
 .nav-menu{
     display: flex;
     flex-direction: column;
-    padding: 2%;
+    padding: 4% 2%;
     width:100%;
     border-radius: 2px;
     background-color:rgb(241, 241, 241);
@@ -624,7 +625,7 @@ h5{
     border-radius: 2px;
     table-layout: fixed;
     border-collapse: collapse;
-    font-size: 0.95rem;
+    font-size: 1.05rem;
     min-width: 320px;
     margin:20px 0;
 }
@@ -636,6 +637,7 @@ h5{
 }
 .table-content thead tr{
     text-align: center;
+    vertical-align: middle;
 }
 .table-content th,
 .table-content td{
@@ -647,6 +649,7 @@ h5{
 .table-content tbody tr{
     background-color: var(--second-color);
     border-bottom: 1px solid #fff;  
+    
 }
 .table-content tbody tr:last-child{
     border-bottom: none;
@@ -667,9 +670,9 @@ h5{
     color: rgba(0,0,0,0.4);
     cursor: pointer;
     position:absolute;
-    font-size:1.5rem;
-    right:-45px;
-    top:-1px;
+    font-size:1.6rem;
+    right:-7px;
+    top:23px;
     transition:all 0.2s;
 }
 .order-close:hover{
@@ -679,14 +682,10 @@ h5{
 
 .icon-q{
     cursor: pointer;
-    font-size: 1.3rem;
-    position: relative;
-    top:4px;
-    transition: all 0.3s;
+    font-size: 1.6rem;
+    transition: all 0.3s; 
 }
-.icon-q:hover{
-    color:#fff;
-}
+
 .quantity-real:focus{
     outline: none;
 }
@@ -694,17 +693,40 @@ h5{
     background-color:rgb(216, 215, 215);
     border:none;
     border-radius: 30%;
-    padding: 0 3px;
+    padding: 0 5px;
     margin: 0 1px;
-    height: 20px;
-    width:20px;
+    height: 25px;
+    width:30px;
     text-align: center;
     transition: all 0.3s;
+    position: relative;  
 }
 .quantity-real:hover,
 .quantity-real:focus{
     background-color: #f7f7f7;
 }
+.quantity-order{
+    position: relative;
+}
+.plus-q{
+    position: absolute;
+    top:37px;
+    right:7px;
+}
+.minus-q{
+    position: absolute;
+    left:7px;
+    top:37px;
+}
+.icon-q:hover{
+    color:#fff;
+    transform: scale(1.2);
+}
+.total-order-price{
+    position: relative;
+}
+
+
 
 /* Hidden message under order table */
 .hidden-section-order{
@@ -717,8 +739,8 @@ h5{
     align-items: center;
     min-width: 340px;
     text-align: left;
-    margin:4px 0;
-    padding: 0;
+    margin:20px 0 10px 0;
+    padding: 5px 0;
     height: 10px;
 }
 .hidden-table-msg ion-icon{
@@ -794,12 +816,13 @@ select{
 
 /* Order button */
 .order-btn-box{
-    margin: 60px 0;
+    margin: 40px 0;
     background-color: var(--third-color);
     padding: 2px;
     border-radius: 10px;
 }
 #order-btn{
+    cursor: pointer;
     background-color: var(--third-color);
     border:2px solid #fff;
     border-radius: 10px;
@@ -808,12 +831,14 @@ select{
     padding: 12px 22px;
     transition: all 0.3s;
 }
-#order-btn:focus,
 #order-btn:hover{
     outline: none;
     box-shadow: 0 0 0 2px var(--second-color);
     background-color: #fff;  
     color:var(--second-color);
+}
+#order-btn:focus{
+    outline: none;
 }
 
 /* Delivery info */
@@ -823,6 +848,7 @@ select{
     margin: 30px 0 15px 0;
     padding: 20px 0 30px 0;
     width: 350px;
+    transition: all .3s linear 0s;
 }
 .form-delivery-box form{
     display: flex;
@@ -840,44 +866,97 @@ select{
     color:#000;
     cursor: pointer;
     border:1px solid var(--main-color);
-    border-radius: 2px;
+    border-radius: 4px;
     color:var(--main-color);
     padding: 5px 5px;
     transition:0.3s;
+    width: 100%;
 }
+
 .control-field{
     display: flex;
     font-family:'open-sans',Arial, Helvetica, sans-serif;
     flex-direction: column;
-    margin:5px 0;
+    margin:8px 0;
+    width: 70%;
 }
 
-.control-field small{
-    display:none;
+.control-field.error input {
+    border:2px solid red;
 }
-.control-field small.error{
-    display: block;
-    font-size: 0.8rem;
+
+.control-field.success input{
+    border:2px solid rgb(33, 231, 33);
+}
+.control-field small{
+    display: none;
+}
+
+.container-check small{
+    display: none;
+}
+.container-check.error small{
+    display:block;
+    font-size: 0.65rem;
+    color:red;
+    padding: 2px 5px;
+}
+.control-field.error small{
+    display:block;
+    font-size: 0.65rem;
     color:red;
     padding: 2px 5px;
 }
 .form-delivery-box input:hover,
 .form-delivery-box input:focus,
 .form-delivery-box input:active{
-    border:1px solid var(--third-color);
     outline:none;
-    background-color:var(--third-color);
-    color:#fff;
+    background-color:#fff;
+    color:var(--main-color);
 }
 .form-delivery-box input:hover::placeholder,
 .form-delivery-box input:focus::placeholder{
-    color:#fff;
+    color:var(--main-color);
 }
 
 .form-delivery-box input::placeholder,
 .form-delivery-box label{
     color:#000;
     cursor: pointer;
+}
+.register-info-box{
+    opacity: 0;
+    visibility: none;
+    transition: all .35s linear 0s;
+    display: none;
+}
+
+.hide{
+    opacity: 1;
+    visibility: visible;
+    transition: all .3s linear 0s;
+    display: block;
+}
+
+/* Thank message after registration of account */
+.thanks-msg{
+    position: relative;
+    opacity: 0;
+    visibility: none;
+    transition: all .35s linear 0s;
+    height: 0;
+}
+.thanks-msg ion-icon{
+    color:rgb(33, 231, 33);
+    position: absolute;
+    left:-20px;
+    top:0px;  
+}
+.thanks-msg.hide{
+    opacity: 1;
+    visibility: visible;
+    transition: all .3s linear 0s;
+    
 }
     /* Custom checkbox for delivery info */
 .container-check{
@@ -902,11 +981,22 @@ select{
     background-color: #fff;
     border:1px solid var(--main-color);
 }
-.checkmark::after{
+.checkbox:checked{
+    position: absolute;
+    top:0;
+    left:15px;
+    height:18px;
+    width: 18px;
+    background-color: #fff;
+    border:1px solid var(--main-color);
+}
+.checkmark::after,
+.checkmark:checked{
     content: '';
     position: absolute;
     display: none;
 }
+.container-check input:checked ~.checkmark:after,
 .container-check input:checked ~.checkmark:after{
     display: block;
 }
@@ -935,6 +1025,85 @@ select{
     background-color: var(--third-color);
     color:#fff;
 }
+/* Modal order */
+.modal{
+    background-color: rgba(0,0,0,0.5);
+    position: fixed;
+    top:0;
+    right:0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(1.1);
+    transition: all 0.25s;
+    display: none;
+}
+.modal-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background-color: rgb(235, 235, 235);
+    width: 50%;
+    height: 50vh;
+    border-radius: 10px;
+    padding: 2%;
+}
+.modal-content h1{
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    padding: 30px 0 10px 0;
+}
+.modal-content h2{
+    position: absolute;
+    bottom: 20%;
+    font-size: 1.2rem;
+}
+.font-size{
+    padding: 5px 0;
+    font-size: 0.9rem;
+}
+.close-modal{
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    font-size: 1.2rem;
+    top:10px;
+    right:10px;
+    transition: all 0.3s;
+}
+.close-modal:hover{
+    transform: scale(1.1);
+    transform: rotate(90deg);
+}
+.close-msg{
+    position: absolute;
+    bottom: 10px;
+    font-size: 0.7rem;
+    right:10px;
+    left: 10px;
+    text-align: center;
+}
+
+.deliveryAddress{
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 5px 0;
+}
+
+.show-modal{
+    display: block;
+    visibility: visible;
+    transform: scale(1);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+
+
 
 /* Footer */
 footer{
@@ -1026,6 +1195,15 @@ footer{
 }
 
 /* Media queries */
+@media screen and (min-width:400px){
+    .hidden-table-msg{
+        margin:5px 0;
+    }
+    .order-close{
+        top:25px;
+        right:4px;
+    }
+}
 
 @media screen and (min-width:615px){
     header{
@@ -1042,6 +1220,10 @@ footer{
     }
     .form input{
         width: 90%;
+    }
+    .order-close{
+        top:0;
+        right:-25px;
     }
    
     .titles{
@@ -1095,10 +1277,27 @@ footer{
     }
     .nav-menu{
         margin:0 auto;
-        max-width: 650px;
+        max-width: 630px;
     }
     .table-content{
-        min-width: 600px;
+        min-width: 630px;
+    }
+    .order-close{
+        top:0;
+        right:-30px;
+    }
+    .plus-q{
+        position: absolute;
+        top:37px;
+        right:15px;
+    }
+    .minus-q{
+        position: absolute;
+        left:15px;
+        top:37px;
+    }
+    .form-delivery-box{
+        width: 450px;
     }
 }
 

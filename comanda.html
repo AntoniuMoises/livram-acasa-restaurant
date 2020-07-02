@@ -14,7 +14,6 @@
         <a href='index.html'><img src="images/logo1.png" alt="Logo"></a> 
         <div class="nav-btns show-btns">
             <a href="index.html#menu-title" class="menu">Meniu</a>
-            <a href="#" class="login" id="login">Login</a>
             <a href="#" id='userId' >UserName</a>
             <a href="#" class="cos" id='cos' >Cos<span id='small-quantity'>3</span></a>  
             <!-- Login box -->
@@ -42,9 +41,9 @@
                     <td><img src="images/hummus.jpg" alt="" class='img-item-order'></td>
                     <td class='name-order'>Hummus</td>
                     <td class='quantity-order'>
-                        <ion-icon name="add-circle-outline" class='icon-q plus-q' ></ion-icon>
-                        <input class='quantity-real' value='1'>
-                        <ion-icon name="remove-circle-outline" class='icon-q minus-q'></ion-icon>
+                        <ion-icon name="add-circle-outline" class='icon-q plus-q icon-q-left' ></ion-icon>
+                        <input type='tel' pattern="[0-9]" class='quantity-real' value='1'>
+                        <ion-icon name="remove-circle-outline" class='icon-q minus-q icon-q-right'></ion-icon>
                     </td>
                     <td class='price-order'>15 lei</td>
                     <ion-icon name="close-circle-outline" class='cart-box-delete-itm'></ion-icon>
@@ -55,8 +54,10 @@
             </tbody>
             <tfoot>
                 <tr class='font-title'>
-                    <th class='size'colspan="3"></th>
-                    <td class='total-order-price size' colspan="4">150 lei</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class='total-order-price size'>150 lei</td>
                 </tr>
             </tfoot>
         </table>
@@ -92,59 +93,75 @@
                 <h5 class="font-title">Date de livrare:</h5>
                 <form>
                     <div class="control-field">
-                        <input type="text" placeholder="Nume" id='name' required>
+                        <input type="text" placeholder="Nume" id='name'>
                         <small>Error message</small>
                     </div>
                     <div class="control-field">
-                        <input type="text" placeholder="Prenume" id='first-name' required>
+                        <input type="text" placeholder="Prenume" id='first-name' >
                         <small>Error message</small>
                     </div>
                     <div class="control-field">
-                        <input type="text" placeholder="Adresă de livrare" id='address' required>
+                        <input type="text" placeholder="Adresa de livrare" id='address' >
                         <small>Error message</small>
                     </div>
                     <div class="control-field">
-                        <input type="text" placeholder="Telefon" id='phone' required>
+                        <input type="text" placeholder="Număr de telefon" id='phone'>
                         <small>Error message</small>
                     </div>
                     <label class="container-check" >Cluj-Napoca
-                        <input type="checkbox" id='city' required >
+                        <input type="checkbox" id='city'>
                         <span class="checkmark"></span>
+                        <small>Error message</small>
                     </label>
                 </form>
             </div>
             <!-- Register account if user hasn't one (user is not logged in) -->
-            <label class="container-check" id='show-register-box'>Vrei să înregistrezi un cont?
-                <input type="checkbox">
+            <label class="container-check" >Vrei să înregistrezi un cont?
+                <input type="checkbox" id='show-register-box'>
                 <span class="checkmark"></span>
             </label>
         </div>
         <!-- Show fields to complete the registration -->
-        <div class="form-delivery-box" id='register-info-box'>
+        <div class="form-delivery-box register-info-box" id='register-info-box'>
             <h5 class="font-title">Înregistrează contul:</h5>
             <form>
                 <div class="control-field">
-                    <input type="text" placeholder="Nume de utilizator" id='username' required>
+                    <input type="text" placeholder="Nume de utilizator" id='username'>
                     <small>Error message</small>
                 </div>
                 <div class="control-field">
-                    <input type="text" placeholder="Parolă" id='password' required>
+                    <input type="password" placeholder="Parolă" id='password'>
                     <small>Error message</small>
                 </div>
                 <div class="control-field">
-                    <input type="password" placeholder="Repetă parola" id='password2' required>
+                    <input type="password" placeholder="Repetă parola" id='password2'>
                     <small>Error message</small>
                 </div>
                 <div class="control-field">
-                    <input type="email" placeholder="Email" id='email' required>
+                    <input type="email" placeholder="Email" id='email'>
                     <small>Error message</small>
                 </div>
                 <button id="register-acc-btn">Înregistrez contul</button>
             </form>
         </div>
+        <div class="thanks-msg">
+            <p>Contul tau a fost inregistrat cu success!</p> 
+            <ion-icon name="checkmark-outline" ></ion-icon>
+        </div>
         <!-- Order button -->
         <div class="order-btn-box font-title">
             <button id="order-btn">Comandă</button>
+        </div>
+        <div class="modal">
+            <div class="modal-content">
+                <ion-icon name="close-outline" class='close-modal'></ion-icon>
+                <h1 class='font-title'>Am primit comanda ta!</h1>
+                <p class='font-text font-size'>Livrarea va avea loc în aproximativ 45 minute la adresa: </p>
+                <p class='font-text deliveryAddress'>Cluj-Napoca, str.Florilor, nr. 148, ap.2</p>
+                <h2 class='font-title'>Poftă bună!</h2>
+                <p class='font-text close-msg'>Pagina se va inchide automat în 10 secunde </p>
+                
+            </div>
         </div>
     </section>
     <footer>

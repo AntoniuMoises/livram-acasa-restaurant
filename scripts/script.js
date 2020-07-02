@@ -196,7 +196,7 @@ let appController = (function(dataCtrl, UICtrl){
        if(e.target !== loginBtn && e.target.parentNode !== loginBox && e.target !== loginBox){
            loginBox.classList.add('hideElement');   
        }
-       if(!e.target.classList.contains('btns-filter')){
+       if(!e.target.classList.contains('btns-filter') && !e.target.classList.contains('add-btn')){
           UIController.showAllItem();
        }
        
@@ -237,6 +237,7 @@ let appController = (function(dataCtrl, UICtrl){
     dataController.saveData();
 
    });
+   
       
    UIController.showAllItem();
 })(dataController,UIController);
