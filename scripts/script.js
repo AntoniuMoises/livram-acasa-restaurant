@@ -1,5 +1,6 @@
 // Data controler 
 let dataController = (function() {
+
     let storeAllItemCart = [];
     let storeInfoProduct = [];
 
@@ -168,7 +169,9 @@ let UIController = (function(){
                 total = '';
                 this.displayCartBox();
             }   
-        }    
+        }
+
+       
     };
         
 })();

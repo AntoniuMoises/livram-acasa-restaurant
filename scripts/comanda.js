@@ -138,7 +138,7 @@ let UIController = (function(){
         },
 
         toggleModal:function(modal){
-            modal.classList.toggle('show-modal');   
+            modal.classList.toggle('show-modal');     
         },
 
         windowClose:function(modal){
